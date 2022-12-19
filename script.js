@@ -200,48 +200,12 @@ function generateQuiz() {
   quizContainer.innerHTML = quiz; // inserisci il codice HTML nel container del quiz
 }
 
-// funzione per mostrare i risultati del quiz
-function showResults() {
-  // recupera il numero totale di domande
-  const totalQuestions = questions.length;
-
-  // genera il codice HTML per i risultati
-  const results = `
-    <h2>Hai completato il quiz!</h2>
-    <h3>Il tuo punteggio: ${score} / ${totalQuestions}</h3>
-  `;
-
-  resultsContainer.innerHTML = results; // inserisci il codice HTML nel container dei risultati
-}
-
 const progressBar = document.getElementById("progress-bar"); // seleziona l'elemento HTML con l'ID "progress-bar"
 
-// const timeLimit = 30; // imposta il limite di tempo a 30 secondi
-// let timeLeft; // dichiarare la variabile timeLeft fuori dalla funzione generateQuiz
-// const timerContainer = document.getElementById("timer"); // seleziona l'elemento HTML con l'ID "timer"
-
-// // funzione per aggiornare il timer
-// function updateTimer() {
-//   // mostra il tempo rimanente
-//   timerContainer.innerHTML = `Tempo rimanente: ${timeLeft} secondi`;
-
-//   // controlla se il tempo è scaduto
-//   if (timeLeft === 0) {
-//     generateQuiz();
-//     submitButton.click(); // invia la domanda
-//   } else {
-//     timeLeft--; // decrementa il tempo rimanente di 1 secondo
-//   }
-//   setInterval(updateProgressBar, 1000); // aggiorna la barra di avanzamento ogni secondo
-// }
 let timer;
 let interval;
 // mostra la prima domanda
 generateQuiz();
-//timeLeft = timeLimit;
-//updateTimer();
-// gestisci la submit del form
-
 // Imposta il timer a 60 secondi
 timerTot = 10;
 let percentage;
@@ -260,6 +224,20 @@ interval = setInterval(function () {
     generateQuiz();
   }
 }, 1000);
+
+// funzione per mostrare i risultati del quiz
+function showResults() {
+  // recupera il numero totale di domande
+  const totalQuestions = questions.length;
+
+  // genera il codice HTML per i risultati
+  const results = `
+      <h2>Hai completato il quiz!</h2>
+      <h3>Il tuo punteggio: ${score} / ${totalQuestions}</h3>
+    `;
+
+  resultsContainer.innerHTML = results; // inserisci il codice HTML nel container dei risultati
+}
 
 quizContainer.addEventListener("submit", (event) => {
   event.preventDefault(); // impedisci il submit del form
