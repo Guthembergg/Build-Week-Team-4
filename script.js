@@ -33,110 +33,6 @@
 //         */
 //     -->
 
-// <head></head>
-
-// <body>
-//   <script>
-//     const questions = [
-//       {
-//         category: "Science: Computers",
-//         type: "multiple",
-//         difficulty: "easy",
-//         question: "What does CPU stand for?",
-//         correct_answer: "Central Processing Unit",
-//         incorrect_answers: [
-//           "Central Process Unit",
-//           "Computer Personal Unit",
-//           "Central Processor Unit",
-//         ],
-//       },
-//       {
-//         category: "Science: Computers",
-//         type: "multiple",
-//         difficulty: "easy",
-//         question:
-//           "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
-//         correct_answer: "Final",
-//         incorrect_answers: ["Static", "Private", "Public"],
-//       },
-//       {
-//         category: "Science: Computers",
-//         type: "boolean",
-//         difficulty: "easy",
-//         question: "The logo for Snapchat is a Bell.",
-//         correct_answer: "False",
-//         incorrect_answers: ["True"],
-//       },
-//       {
-//         category: "Science: Computers",
-//         type: "boolean",
-//         difficulty: "easy",
-//         question:
-//           "Pointers were not used in the original C programming language; they were added later on in C++.",
-//         correct_answer: "False",
-//         incorrect_answers: ["True"],
-//       },
-//       {
-//         category: "Science: Computers",
-//         type: "multiple",
-//         difficulty: "easy",
-//         question:
-//           "What is the most preferred image format used for logos in the Wikimedia database?",
-//         correct_answer: ".svg",
-//         incorrect_answers: [".png", ".jpeg", ".gif"],
-//       },
-//       {
-//         category: "Science: Computers",
-//         type: "multiple",
-//         difficulty: "easy",
-//         question: "In web design, what does CSS stand for?",
-//         correct_answer: "Cascading Style Sheet",
-//         incorrect_answers: [
-//           "Counter Strike: Source",
-//           "Corrective Style Sheet",
-//           "Computer Style Sheet",
-//         ],
-//       },
-//       {
-//         category: "Science: Computers",
-//         type: "multiple",
-//         difficulty: "easy",
-//         question:
-//           "What is the code name for the mobile operating system Android 7.0?",
-//         correct_answer: "Nougat",
-//         incorrect_answers: [
-//           "Ice Cream Sandwich",
-//           "Jelly Bean",
-//           "Marshmallow",
-//         ],
-//       },
-//       {
-//         category: "Science: Computers",
-//         type: "multiple",
-//         difficulty: "easy",
-//         question: "On Twitter, what is the character limit for a Tweet?",
-//         correct_answer: "140",
-//         incorrect_answers: ["120", "160", "100"],
-//       },
-//       {
-//         category: "Science: Computers",
-//         type: "boolean",
-//         difficulty: "easy",
-//         question: "Linux was first created as an alternative to Windows XP.",
-//         correct_answer: "False",
-//         incorrect_answers: ["True"],
-//       },
-//       {
-//         category: "Science: Computers",
-//         type: "multiple",
-//         difficulty: "easy",
-//         question:
-//           "Which programming language shares its name with an island in Indonesia?",
-//         correct_answer: "Java",
-//         incorrect_answers: ["Python", "C", "Jakarta"],
-//       },
-//     ];
-
 //     window.onload = function () {
 //       // TIPS:
 
@@ -162,3 +58,233 @@
 // </body>
 
 // </html>
+
+const questions = [
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "easy",
+    question: "What does CPU stand for?",
+    correct_answer: "Central Processing Unit",
+    incorrect_answers: [
+      "Central Process Unit",
+      "Computer Personal Unit",
+      "Central Processor Unit",
+    ],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "easy",
+    question:
+      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
+    correct_answer: "Final",
+    incorrect_answers: ["Static", "Private", "Public"],
+  },
+  {
+    category: "Science: Computers",
+    type: "boolean",
+    difficulty: "easy",
+    question: "The logo for Snapchat is a Bell.",
+    correct_answer: "False",
+    incorrect_answers: ["True"],
+  },
+  {
+    category: "Science: Computers",
+    type: "boolean",
+    difficulty: "easy",
+    question:
+      "Pointers were not used in the original C programming language; they were added later on in C++.",
+    correct_answer: "False",
+    incorrect_answers: ["True"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "easy",
+    question:
+      "What is the most preferred image format used for logos in the Wikimedia database?",
+    correct_answer: ".svg",
+    incorrect_answers: [".png", ".jpeg", ".gif"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "easy",
+    question: "In web design, what does CSS stand for?",
+    correct_answer: "Cascading Style Sheet",
+    incorrect_answers: [
+      "Counter Strike: Source",
+      "Corrective Style Sheet",
+      "Computer Style Sheet",
+    ],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "easy",
+    question:
+      "What is the code name for the mobile operating system Android 7.0?",
+    correct_answer: "Nougat",
+    incorrect_answers: ["Ice Cream Sandwich", "Jelly Bean", "Marshmallow"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "easy",
+    question: "On Twitter, what is the character limit for a Tweet?",
+    correct_answer: "140",
+    incorrect_answers: ["120", "160", "100"],
+  },
+  {
+    category: "Science: Computers",
+    type: "boolean",
+    difficulty: "easy",
+    question: "Linux was first created as an alternative to Windows XP.",
+    correct_answer: "False",
+    incorrect_answers: ["True"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "easy",
+    question:
+      "Which programming language shares its name with an island in Indonesia?",
+    correct_answer: "Java",
+    incorrect_answers: ["Python", "C", "Jakarta"],
+  },
+];
+
+const quizContainer = document.getElementById("quiz"); // seleziona l'elemento HTML con l'ID "quiz"
+const resultsContainer = document.getElementById("results"); // seleziona l'elemento HTML con l'ID "results"
+const submitButton = document.getElementById("next"); // seleziona l'elemento HTML con l'ID "submit"
+
+let currentQuestion = 0; // imposta il contatore delle domande a zero
+let score = 0; // imposta il punteggio a zero
+
+// funzione per generare il quiz
+function generateQuiz() {
+  // recupera la domanda corrente
+  const currentQuestionObject = questions[currentQuestion];
+
+  // recupera la domanda e le possibili risposte
+  const question = currentQuestionObject.question;
+  const answers = currentQuestionObject.incorrect_answers;
+  answers.push(currentQuestionObject.correct_answer); // aggiungi la risposta corretta alle altre risposte
+
+  // shuffle le risposte
+  answers.sort(() => Math.random() - 0.5);
+
+  // genera il codice HTML per la domanda e le risposte
+  const quiz = `
+    <h2>${question}</h2>
+    <div id="timer"></div>
+<div id="progress-bar-container">
+  <div id="progress-bar"></div>
+</div>
+    <form>
+    ${answers
+      .map(
+        (answer) => `
+          <label>
+            <input type="radio" name="question${currentQuestion}" value="${answer}" required>
+            ${answer}
+          </label>
+        `
+      )
+      .join("")}
+      <button type="submit" id="next">Invia</button>
+    </form>
+  `;
+
+  quizContainer.innerHTML = quiz; // inserisci il codice HTML nel container del quiz
+}
+
+// funzione per mostrare i risultati del quiz
+function showResults() {
+  // recupera il numero totale di domande
+  const totalQuestions = questions.length;
+
+  // genera il codice HTML per i risultati
+  const results = `
+    <h2>Hai completato il quiz!</h2>
+    <h3>Il tuo punteggio: ${score} / ${totalQuestions}</h3>
+  `;
+
+  resultsContainer.innerHTML = results; // inserisci il codice HTML nel container dei risultati
+}
+
+const progressBar = document.getElementById("progress-bar"); // seleziona l'elemento HTML con l'ID "progress-bar"
+
+// const timeLimit = 30; // imposta il limite di tempo a 30 secondi
+// let timeLeft; // dichiarare la variabile timeLeft fuori dalla funzione generateQuiz
+// const timerContainer = document.getElementById("timer"); // seleziona l'elemento HTML con l'ID "timer"
+
+// // funzione per aggiornare il timer
+// function updateTimer() {
+//   // mostra il tempo rimanente
+//   timerContainer.innerHTML = `Tempo rimanente: ${timeLeft} secondi`;
+
+//   // controlla se il tempo è scaduto
+//   if (timeLeft === 0) {
+//     generateQuiz();
+//     submitButton.click(); // invia la domanda
+//   } else {
+//     timeLeft--; // decrementa il tempo rimanente di 1 secondo
+//   }
+//   setInterval(updateProgressBar, 1000); // aggiorna la barra di avanzamento ogni secondo
+// }
+let timer;
+let interval;
+// mostra la prima domanda
+generateQuiz();
+//timeLeft = timeLimit;
+//updateTimer();
+// gestisci la submit del form
+
+// Imposta il timer a 60 secondi
+timerTot = 10;
+let percentage;
+// Aggiorna il timer ogni secondo
+timer = timerTot;
+interval = setInterval(function () {
+  timer--;
+  percentage = timer / timerTot;
+  percentage = document.getElementById("timer").innerText =
+    "Tempo rimanente: " + timer + " secondi";
+
+  // Se il timer scade, invia la domanda e resetta il timer
+  if (timer === 0) {
+    timer = timerTot;
+    currentQuestion++;
+    generateQuiz();
+  }
+}, 1000);
+
+quizContainer.addEventListener("submit", (event) => {
+  event.preventDefault(); // impedisci il submit del form
+  timer = timerTot;
+  // recupera la risposta selezionata dall'utente
+  const selected = document.querySelector(
+    `input[name=question${currentQuestion}]:checked`
+  );
+  const answer = selected.value;
+
+  // controlla se la risposta è corretta
+  if (answer === questions[currentQuestion].correct_answer) {
+    score++; // aumenta il punteggio di 1
+  }
+
+  selected.checked = false; // deseleziona la risposta selezionata
+
+  // vai alla prossima domanda
+  currentQuestion++;
+
+  // controlla se ci sono ancora domande da mostrare
+  if (currentQuestion < questions.length) {
+    generateQuiz(); // mostra la prossima domanda
+  } else {
+    showResults(); // mostra i risultati del quiz
+    quizContainer.remove(); // elimina il quiz
+  }
+});
