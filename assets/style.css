@@ -32,7 +32,12 @@ button{
 }
 
 canvas {
-    margin-bottom: 9em;
+    
+    height: 600px;
+    width: 550px;
+    margin: 3em auto 9em auto;
+    
+
 }
 
 
