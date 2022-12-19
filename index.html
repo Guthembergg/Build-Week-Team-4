@@ -6,15 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Benchmark Page Results Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Cahrt.js/2.8.0/Chart.css" />
-    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="assets/style.css" >
     
 </head>
 <body>
     <h1>Results</h1>
-    <p>The summary of your answers:</p>
+
+    <h3>The summary of your answers:</h3>
+
+    <div id="left"></div>
 
 
-    <canvas id="myChart" width="500px" height="100px" ></canvas>
+    <canvas id="myChart" width="500px" height="200px" ></canvas>
+
+
+    <div id="right"></div>
 
 
 
@@ -39,9 +45,9 @@ new Chart(ctx, {
     labels: ['Right Answers', 'Wrong Answers'],
     datasets: [{
       label: 'Total Answers',
-      data: [19, 11],
+      data: [20, 10],
       backgroundColor: ["#00FFFF",
-      "#D20094"],
+      "#D20094"], 
 
       borderWidth: 2
     }]
