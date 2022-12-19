@@ -155,16 +155,14 @@ const questions = [
   },
 ];
 
-const quizContainer = document.getElementById("quiz"); // seleziona l'elemento HTML con l'ID "quiz"
-const resultsContainer = document.getElementById("results"); // seleziona l'elemento HTML con l'ID "results"
-const submitButton = document.getElementById("next"); // seleziona l'elemento HTML con l'ID "submit"
-
+const quizContainer = document.getElementById("quiz");
+const resultsContainer = document.getElementById("results");
+const submitButton = document.getElementById("next");
 let currentQuestion = 0; // imposta il contatore delle domande a zero
 let score = 0; // imposta il punteggio a zero
 
 // funzione per generare il quiz
 function generateQuiz() {
-  // recupera la domanda corrente
   const currentQuestionObject = questions[currentQuestion];
 
   // recupera la domanda e le possibili risposte
@@ -175,7 +173,7 @@ function generateQuiz() {
   // shuffle le risposte
   answers.sort(() => Math.random() - 0.5);
 
-  // genera il codice HTML per la domanda e le risposte
+  // genera il codice HTML per la domanda e le risposte e il timer
   const quiz = `
     <h2>${question}</h2>
     <div id="timer"></div>
@@ -183,16 +181,14 @@ function generateQuiz() {
   <div id="progress-bar"></div>
 </div>
     <form>
-    ${answers
-      .map(
-        (answer) => `
+    ${answers.map(
+      (answer) => `
           <label>
             <input type="radio" name="question${currentQuestion}" value="${answer}" required>
             ${answer}
           </label>
         `
-      )
-      .join("")}
+    )}
       <button type="submit" id="next">Invia</button>
     </form>
   `;
@@ -204,12 +200,13 @@ const progressBar = document.getElementById("progress-bar"); // seleziona l'elem
 
 let timer;
 let interval;
-// mostra la prima domanda
-generateQuiz();
+
+generateQuiz(); // mostra la prima domanda
+
 // Imposta il timer a 60 secondi
 timerTot = 10;
 let percentage;
-// Aggiorna il timer ogni secondo
+
 timer = timerTot;
 interval = setInterval(function () {
   timer--;
@@ -217,15 +214,16 @@ interval = setInterval(function () {
   percentage = document.getElementById("timer").innerText =
     "Tempo rimanente: " + timer + " secondi";
 
-  // Se il timer scade, invia la domanda e resetta il timer
+  // Se il timer scade, invia la domanda , resetta il timer e passa alla prossima domanda
   if (timer === 0) {
     timer = timerTot;
     currentQuestion++;
     generateQuiz();
   }
-}, 1000);
+}, 1000); // Aggiorna il timer ogni secondo
 
 // funzione per mostrare i risultati del quiz
+
 function showResults() {
   // recupera il numero totale di domande
   const totalQuestions = questions.length;
